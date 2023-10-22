@@ -1,16 +1,23 @@
 # public_toilets
 
-A new Flutter project.
+## การสร้าง API server บน localhost
+1. ติดตั้ง [Node.js](https://nodejs.org/en/download)
+2. ติดตั้ง `json-server` โดยพิมพ์คำสั่งที่ terminal (command-line):
 
-## Getting Started
+```bash
+npm install -g json-server
+```
 
-This project is a starting point for a Flutter application.
+3. รัน API server โดยใช้ข้อมูลจากไฟล์ db.json ที่อยู่ในโฟลเดอร์ assets/data ของโปรเจคนี้
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+json-server --watch assets/data/db.json
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+>> Note: ถ้าหาก terminal ไม่ได้อยู่ที่ root folder ของโปรเจค ให้ `cd` มาที่ root folder ของโปรเจคก่อน แล้วค่อยพิมพ์คำสั่งข้างต้น แต่ปกติเมื่อเปิด terminal ขึ้นมาใหม่ใน VS Code หรือ Android Studio โฟลเดอร์ปัจจุบันใน terminal จะเป็น root folder ของโปรเจคอยู่แล้ว
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. ทดสอบการทำงานของ API server โดยใช้ web browser เข้าไปที่
+
+    * http://localhost:3000/toilets
+    * http://localhost:3000/reviews
+    * http://localhost:3000/toilets?_embed=reviews
