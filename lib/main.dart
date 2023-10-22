@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:public_toilets/screens/home/add_toilet.dart';
 import 'package:public_toilets/screens/home/home_page.dart';
 
 void main() {
@@ -19,7 +20,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: GoogleFonts.kanit().fontFamily,
       ),
-      home: const HomePage(),
+      //home: const HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        AddToiletPage.routeName: (context) => AddToiletPage(),
+      },
     );
   }
 }
