@@ -62,33 +62,33 @@ class _AddToiletPageState extends State<AddToiletPage> {
 
     buildForm() => SingleChildScrollView(
         child: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(1.0),
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(1.0),
                   child: TextField(
                       controller: _toiletNameController,
                       decoration: InputDecoration(
-                          hintText: 'Toilet name',
+                          hintText: 'Book name',
                           border: OutlineInputBorder(
                               borderSide: BorderSide(
                             color: Colors.greenAccent,
                           )))),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(1.0),
                   child: TextField(
                       controller: _distanceController,
                       decoration: InputDecoration(
-                          hintText: 'Distance',
+                          hintText: 'Price',
                           border: OutlineInputBorder(
                               borderSide: BorderSide(
                             color: Colors.greenAccent,
                           )))),
                 ),
                 Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(1.0),
                     child: ElevatedButton(
                       onPressed: handleClickSave,
                       child: Text('SAVE'),
@@ -97,7 +97,7 @@ class _AddToiletPageState extends State<AddToiletPage> {
             )));
 
     return Scaffold(
-        appBar: AppBar(title: Text('ADD TOILET')),
+        appBar: AppBar(title: Text('ADD BOOK')),
         body: Stack(
           children: [
             buildForm(),

@@ -31,7 +31,7 @@ class ToiletListItem extends StatelessWidget {
                   width: 60.0,
                   height: 60.0,
                   color: colorScheme.background,
-                  child: Center(child: Icon(Icons.home, size: 30.0))),
+                  child: Center(child: Icon(Icons.book_sharp, size: 30.0))),
               SizedBox(width: 8.0),
               Expanded(child: Text(toilet.name, style: textTheme.titleLarge)),
               Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
@@ -45,7 +45,7 @@ class ToiletListItem extends StatelessWidget {
                         //Text(toilet.averageRating.toStringAsFixed(1))
                       ])
                     : Text('ยังไม่มีคะแนน'),
-                Text('${toilet.distance.toString()} เมตร',
+                Text('${toilet.distance.toString()} บาท',
                     style: textTheme.bodyLarge)
               ])
             ])));
